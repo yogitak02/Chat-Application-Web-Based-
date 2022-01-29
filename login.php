@@ -1,13 +1,15 @@
 <?php
 session_start();
-if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
+if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true)
+{
     header("location: main.php");
-  }
+}
 $showAlert = false;
 $showError = false;
 
 require 'partials/dbconnect.php';
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
   
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -15,11 +17,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
     $row=mysqli_fetch_array($result);
-    if ($num == 1){
-        
-            if(password_verify($password,$row['password'])){
+   
+    if ($num == 1)
+    {
+       
+
+        if(password_verify($password,$row['password']))
+            {
                 $login = true;
-                if($login){
+                if($login)
+                {
                      session_start();
                      $sql = "Select * from users where username='$username'";
                      $result = mysqli_query($conn, $sql);
@@ -39,11 +46,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                      $sql2 = "UPDATE `users` SET `otp`=$otp, `otpexp` ='$otpexp' WHERE public_key = $public_key;";
                      $result2 = mysqli_query($conn,$sql2);
                      include 'partials/sendotp.php';
-                       sendotp($to,$otp);
+                      sendotp($to,$otp);
                     header("location: partials/verifyotp.php");
                 }
             }
-            else{
+            else
+            {
                 $showError = "password not match";
             }
     } 
@@ -91,8 +99,7 @@ if($showError){
             </div>
             <div class="form-control">
                 <label for="username">Password</label>
-                <input type="password" placeholder="" id="password" name="password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                <input type="password" placeholder="" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required />
             </div>

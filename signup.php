@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
+if(isset($_SESSION['public_key']) ){
     header("location: main.php");
   }
 
@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
             if($result){ 
                 $showAlert = true;   
-                session_start();
+               # session_start();
                      // access data from users table to avoid bug for public_key
                      $sql = "Select * from users where username='$username'";
                      $result = mysqli_query($conn, $sql);

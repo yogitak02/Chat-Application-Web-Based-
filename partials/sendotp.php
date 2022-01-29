@@ -21,9 +21,9 @@ $body = "Your OTP is $otp";
 	$mail->Port = 587; 
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8'; 
-	$mail->Username   = '';                     //SMTP username
-    $mail->Password   = '';
-	$mail->SetFrom("");
+	$mail->Username   = 'applicationchat074@gmail.com';                     //SMTP username
+    $mail->Password   = 'phpmailpass12345';
+	$mail->SetFrom("applicationchat074@gmail.com");
 	$mail->Subject ="sucess";
 	$mail->Body =$body;
 	$mail->AddAddress($to);
