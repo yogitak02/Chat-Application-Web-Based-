@@ -186,7 +186,7 @@ if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
             <a href="login.php" class="btn btn-outline-dark btn-space">login</a>
         </div>
         <div class="github">
-            <a href="https://github.com/Aman-tamboli/chatapp" target="_blank"> Follow Our Code On GitHub
+            <a href="https://github.com/yogitak02/Chat-application-Web-Based-" target="_blank"> Follow Our Code On GitHub
                 <i class="fab fa-github"></i></a>
         </div>
     </div>

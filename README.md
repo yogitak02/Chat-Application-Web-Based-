@@ -39,7 +39,7 @@ and import database file and you're ready to use.
 
 ## Authors
 
-- [@amantamboli](https://www.github.com/Aman-tamboli)
+- [@yogitakulkarni](https://github.com/yogitak02)
 
 
 ## 🚀 About Me
@@ -52,11 +52,11 @@ Javascript, HTML, CSS, C++, Java
 
 ## 🔗 Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amantamboli)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yogita-kulkarni-92b38021b)
 
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at amantamboli7781@gmail.com
+If you have any feedback, please reach out to us at yogitakulkarni2112000@gmail.com
 
