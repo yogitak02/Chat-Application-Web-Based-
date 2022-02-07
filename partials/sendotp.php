@@ -21,17 +21,13 @@ $body = "Your OTP is $otp";
 	$mail->Port = 587; 
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8'; 
-	$mail->Username   = 'applicationchat074@gmail.com';                     //SMTP username
-    $mail->Password   = 'phpmailpass12345';
-	$mail->SetFrom("applicationchat074@gmail.com");
+	$mail->Username   = '';                     //SMTP username
+    $mail->Password   = '';
+	$mail->SetFrom("");
 	$mail->Subject ="sucess";
 	$mail->Body =$body;
 	$mail->AddAddress($to);
-	$mail->SMTPOptions=array('ssl'=>array(
-		'verify_peer'=>false,
-		'verify_peer_name'=>false,
-		'allow_self_signed'=>true
-	));
+	$mail->SMTPOptions=array('ssl'=>array('verify_peer'=>false,'verify_peer_name'=>false,'allow_self_signed'=>true));
 	if(!$mail->Send()){
 		echo $mail->ErrorInfo;
 		echo 'fail';

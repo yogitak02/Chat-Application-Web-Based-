@@ -8,7 +8,7 @@ if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8">  <!-- the charset attribut specifies the character encoding-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -19,8 +19,8 @@ if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0;/*space around elements border */
+            padding: 0; /*between elemwnt border */
             box-sizing: border-box;
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
@@ -94,7 +94,7 @@ if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
             flex-wrap: wrap;
         }
 
-        @keyframes typing {
+        @keyframes typing {    /* specifies animation mode */
             from {
                 width: 0
             }
@@ -127,17 +127,21 @@ if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true){
             margin-top: 5%;
         }
 
-        @media screen and (max-width:480px) {
-            .container1 {
+        @media screen and (max-width:480px) /*to adjust acc to device*/
+        {          
+            .container1 
+            {
                 width: 100%;
                 height: 50vh;
             }
 
-            .box {
+            .box 
+            {
                 width: 80%;
             }
 
-            .github {
+            .github 
+            {
                 width: 65%;
                 margin-top: 15%;
             }

@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $img_type = $_FILES['image']['type'];
         $tmp_name = $_FILES['image']['tmp_name'];
         
-        $img_explode = explode('.',$img_name);
+        $img_explode = explode('.',$img_name); #breaks a string into array
         $img_ext = end($img_explode);
 
         $extensions = ["jpeg", "png", "jpg"];
@@ -59,7 +59,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($emailExists>0){
         $showError = " This Email is alerady exists";
     }
-    else{
+    else
+    {
         if(($password == $passwordc &&  $exists==false)){
             $random_id = rand(time(), 100000000);
             $hash= password_hash($password, PASSWORD_DEFAULT);
@@ -78,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                      $_SESSION['public_key'] = $data['public_key'];
                      $public_key = $data['public_key'];
                      $to = $data['email'];
-                     $otp = $random_id = mt_rand(111111, 999999);
+                     $otp = $random_id = mt_rand(111111, 999999);      #to send otp use random function
                      date_default_timezone_set('Asia/Kolkata');
                         $date=date("Y-m-d h:i");
                         $minutes_to_add = 5;

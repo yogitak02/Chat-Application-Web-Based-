@@ -15,7 +15,7 @@ error_reporting(E_ALL ^ E_WARNING);
     $result3 = mysqli_query($conn, $sql3);
     $row3 = mysqli_fetch_assoc($result3);
     $preference_sender = $row3['preferences'];
-    $preference_sender = explode(" ",$preference_sender);
+    $preference_sender = explode(" ",$preference_sender);  #split string into different strings or divide 
     $no_of_pref = sizeof($preference_sender);
     $matchfound = false;
     $blockstatus = false;
@@ -42,7 +42,7 @@ error_reporting(E_ALL ^ E_WARNING);
             foreach($preference_sender as $preference){
                 if(strstr($preference_receiver,$preference)){
                     $matchfound = true;
-                    $interest = $interest ." ".$preference;
+                    $interest = $interest ." ".$preference;   #preference space for two preference 
                 }
             }
             if($matchfound){             

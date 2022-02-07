@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['public_key']) && $_SESSION['loggedin'] ==true)
+if(isset($_SESSION['public_key']) )
 {
     header("location: main.php");
 }
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 $login = true;
                 if($login)
                 {
-                     session_start();
+                    
                      $sql = "Select * from users where username='$username'";
                      $result = mysqli_query($conn, $sql);
                      $data = mysqli_fetch_assoc($result);

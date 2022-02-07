@@ -3,7 +3,7 @@ const form = document.querySelector(".typing-area"),
   receiver_id = form.querySelector(".receiver_id").value,
   inputField = form.querySelector(".input-field"),
   sendBtn = form.querySelector("button"),
-  chatBox = document.querySelector(".chat-box");
+  chatBox = document.querySelector(".chat-box"); 
 
 form.onsubmit = (e) => {
   e.preventDefault();
